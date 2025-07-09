@@ -5,26 +5,35 @@ class RecipeMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          width: 60,
-          height: 80,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black12),
-            borderRadius: BorderRadius.circular(30),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.food_bank,
-                size: 30,
-                color: Colors.redAccent,
-              ),
-              Text('All'),
-            ],
-          ),
-        )
+        menuItem(Icons.food_bank, 'All'),
+        menuItem(Icons.emoji_food_beverage, 'Coffee'),
+        menuItem(Icons.fastfood, 'Burger'),
+        menuItem(Icons.local_pizza, 'Pizza'),
+
       ],
     );
+  }
+
+  Container menuItem(IconData icon, String text) {
+    return Container(
+        width: 60,
+        height: 80,
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.black12),
+          borderRadius: BorderRadius.circular(30),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              icon,
+              size: 30,
+              color: Colors.redAccent,
+            ),
+            SizedBox(height: 5,),
+            Text(text),
+          ],
+        ),
+      );
   }
 }
