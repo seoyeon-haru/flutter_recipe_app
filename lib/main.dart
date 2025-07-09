@@ -45,9 +45,9 @@ class RecipePage extends StatelessWidget {
           children: [
             RecipeTitle(),
             RecipeMenu(),
-            RecipeListItem(),
-            RecipeListItem(),
-            RecipeListItem(),
+            RecipeListItem('assets/images/coffee.jpg', 'Coffee'),
+            RecipeListItem('assets/images/burger.jpg', 'Burger'),
+            RecipeListItem('assets/images/pizza.jpg', 'Pizza'),
           ],
         ),
       ),
