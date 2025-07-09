@@ -12,6 +12,17 @@ class RecipeMenu extends StatelessWidget {
             border: Border.all(color: Colors.black12),
             borderRadius: BorderRadius.circular(30),
           ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.food_bank,
+                size: 30,
+                color: Colors.redAccent,
+              ),
+              Text('All'),
+            ],
+          ),
         )
       ],
     );
