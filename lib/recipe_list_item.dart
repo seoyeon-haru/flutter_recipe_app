@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RecipeListItem extends StatelessWidget {
-  
   RecipeListItem(this.path, this.title);
-  
+
   String path;
   String title;
 
@@ -14,7 +13,12 @@ class RecipeListItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(path),
+          AspectRatio(
+            aspectRatio: 2 / 1,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.asset(path,fit: BoxFit.cover,)),
+          ),
           Text(
             'Made $title',
             style: TextStyle(fontSize: 20),
