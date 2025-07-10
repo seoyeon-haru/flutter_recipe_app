@@ -9,19 +9,22 @@ class RecipeListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Image.asset(path),
-        Text(
-          'Made $title',
-          style: TextStyle(fontSize: 20),
-        ),
-        Text(
-          "Have you ever made your own $title? Once you've tried a homemade Coffee, you'll never go back.",
-          style: TextStyle(fontSize: 12),
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Image.asset(path),
+          Text(
+            'Made $title',
+            style: TextStyle(fontSize: 20),
+          ),
+          Text(
+            "Have you ever made your own $title? Once you've tried a homemade Coffee, you'll never go back.",
+            style: TextStyle(fontSize: 12),
+          ),
+        ],
+      ),
     );
   }
 }
