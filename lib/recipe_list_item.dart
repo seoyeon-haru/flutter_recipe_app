@@ -19,13 +19,15 @@ class RecipeListItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(path,fit: BoxFit.cover,)),
           ),
+          SizedBox(height: 8),
           Text(
             'Made $title',
             style: TextStyle(fontSize: 20),
           ),
+          SizedBox(height: 4),
           Text(
             "Have you ever made your own $title? Once you've tried a homemade Coffee, you'll never go back.",
-            style: TextStyle(fontSize: 12),
+            style: TextStyle(fontSize: 12, color: Colors.black38),
           ),
         ],
       ),
